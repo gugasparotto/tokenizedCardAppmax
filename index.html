@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link href="css.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container text-bg-dark">
+      <input
+        id="token"
+        type="text"
+        placeholder="appmax token"
+        class="customerForm input-group-text form-control"
+      /><br />
+      <div class="row">
+        <div class="col text-bg-primary">
+          <h1>
+            <i class="fas fa-shipping-fast"></i>
+            Cliente
+          </h1>
+          <div class="name">
+            <div>
+              <label for="firstname">Nome</label>
+              <input
+                class="customerForm input-group-text"
+                id="firstname"
+                type="text"
+                name="firstname"
+                placeholder="text"
+              /><br />
+            </div>
+            <div>
+              <label for="lastname">Sobrenome</label>
+              <input
+                class="customerForm input-group-text"
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="text"
+              /><br />
+            </div>
+          </div>
+          <label for="email">Email</label>
+          <input
+            class="customerForm input-group-text"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="email"
+          /><br />
+          <label for="telephone">Telefone</label>
+          <input
+            class="customerForm input-group-text"
+            type="telephone"
+            id="telephone"
+            name="telephone"
+            placeholder="telefone"
+          /><br />
+        </div>
+        <div class="col text-bg-primary">
+          <div class="street">
+            <label for="postcode">CEP</label>
+            <input
+              class="customerForm input-group-text"
+              type="text"
+              id="postcode"
+              name="postcode"
+            /><br />
+            <label for="address_street">Rua</label>
+            <input
+              class="customerForm input-group-text"
+              type="text"
+              id="address_street"
+              name="address_street"
+            /><br />
+            <label for="address_street_number">Número</label>
+            <input
+              class="customerForm input-group-text"
+              type="number"
+              name="address_street_number"
+              id="address_street_number"
+            /><br />
+            <label for="address_street_complement">Complemento</label>
+            <input
+              class="customerForm input-group-text"
+              type="text"
+              name="address_street_complement"
+              id="address_street_complement"
+            /><br />
+            <label for="address_street_district">Bairro</label>
+            <input
+              class="customerForm input-group-text"
+              type="text"
+              name="address_street_district"
+              id="address_street_district"
+            /><br />
+            <label for="address_city">Cidade</label>
+            <input
+              class="customerForm input-group-text"
+              type="text"
+              id="address_city"
+              name="address_city"
+            /><br />
+            <label for="address_state">Estado</label>
+            <input
+              class="customerForm input-group-text"
+              type="text"
+              id="address_state"
+              name="address_state"
+            /><br />
+            <button id="saveCustomer" class="btn btn-success">
+              Criar customer
+            </button>
+          </div>
+        </div>
+        <div class="col text-bg-primary">
+          <h1><i class="far fa-credit-card"></i> Pagamento</h1>
+          <div class="cc-num">
+            <label for="card-num">Número do cartão</label>
+            <input
+              type="number"
+              class="orderForm input-group-text"
+              name="number"
+              id="number"
+              placeholder="int"
+            /><br />
+          </div>
+          <div>
+            <label for="card-num">Nome do titular</label>
+            <input
+              type="text"
+              class="orderForm input-group-text"
+              name="name"
+              id="name"
+              placeholder="text"
+            /><br />
+          </div>
+          <div>
+            <label for="card-num">CPF</label>
+            <input
+              type="number"
+              class="orderForm input-group-text"
+              name="document_number"
+              id="document_number"
+              placeholder="int"
+            /><br />
+          </div>
+          <div class="cc-info">
+            <div>
+              <label for="card-num">Mês de expiração</label>
+              <input
+                type="number"
+                class="orderForm input-group-text"
+                name="month"
+                id="month"
+                placeholder="int"
+              /><br />
+              <label for="card-num">Ano de expiração</label>
+              <input
+                type="number"
+                class="orderForm input-group-text"
+                name="year"
+                id="year"
+                placeholder="int"
+              /><br />
+            </div>
+            <div>
+              <label for="card-num">CCV</label>
+              <input
+                type="text"
+                class="orderForm input-group-text"
+                name="cvv"
+                id="cvv"
+                placeholder="int"
+              /><br />
+            </div>
+          </div>
+          <div>
+            <label for="card-num">Parcelamento</label>
+            <select class="orderForm input-group-text">
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+              <option value="5"></option>
+              <option value="6"></option>
+              <option value="7"></option>
+              <option value="8"></option>
+              <option value="9"></option>
+              <option value="10"></option>
+              <option value="11"></option>
+              <option value="12"></option></select
+            ><br />
+          </div>
+          <div class="btns">
+            <button name="saveOrder" class="btn btn-success" id="saveOrder">
+              Criar pedido</button
+            ><br />
+            <button
+              name="tokenizeCard"
+              class="btn btn-success"
+              id="tokenizeCard"
+            >
+              Tokenizar cartão</button
+            ><br />
+            <button name="payment" class="btn btn-success" id="payment">
+              realizar pagamento
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/customer.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
